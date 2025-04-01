@@ -8,6 +8,7 @@ class Point:
         return self.x
 
 
-
+def manhattanDistance(Point1, Point2):
+    return Point1.manhattanDistance(Point2)
 
         
