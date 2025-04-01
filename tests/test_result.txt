@@ -3,6 +3,23 @@ platform linux -- Python 3.12.3, pytest-8.3.5, pluggy-1.5.0
 rootdir: /home/lcs/Testing/Manhattan_Distance_Kata
 collected 1 item
 
-tests/test_manhattan_distance.py .                                                                                                      [100%]
+tests/test_manhattan_distance.py F                                                                                                      [100%]
 
-============================================================== 1 passed in 0.01s ==============================================================
+================================================================== FAILURES ===================================================================
+_____________________________________________________________ test_aligned_points _____________________________________________________________
+
+    def test_aligned_points():
+        p1 = Point(1,1)
+        p2 = Point(1,3)
+        p3 = Point(1,5)
+
+        assert manhattanDistance(p1, p2) == 2
+        assert manhattanDistance(p1, p3) == 4
+>       assert manhattanDistance(p3, p1) == 4
+E       assert -4 == 4
+E        +  where -4 = manhattanDistance(<source.manhattan_distance.Point object at 0x7f30ad67bb60>, <source.manhattan_distance.Point object at 0x7f30ad67b800>)
+
+tests/test_manhattan_distance.py:11: AssertionError
+=========================================================== short test summary info ===========================================================
+FAILED tests/test_manhattan_distance.py::test_aligned_points - assert -4 == 4
+============================================================== 1 failed in 0.02s ==============================================================
