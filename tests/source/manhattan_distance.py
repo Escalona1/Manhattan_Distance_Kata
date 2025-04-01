@@ -5,7 +5,7 @@ class Point:
         self.y = y
 
     def manhattanDistance(self, other):
-        return abs(self.y - other.y)
+        return other.x - self.x + abs(self.y - other.y)
 
 
 def manhattanDistance(Point1, Point2):
