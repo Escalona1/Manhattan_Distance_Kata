@@ -1,0 +1,22 @@
+platform linux -- Python 3.12.3, pytest-8.3.5, pluggy-1.5.0
+rootdir: /home/lcs/Testing/Manhattan_Distance_Kata
+collected 1 item
+
+tests/test_manhattan_distance.py F                                                                                                      [100%]
+
+================================================================== FAILURES ===================================================================
+___________________________________________________________________ test_1 ____________________________________________________________________
+
+    def test_1():
+        p1 = Point(1,1)
+        p2 = Point(2,2)
+
+>       assert p1.manhattanDistance(p2) == 1
+E       assert None == 1
+E        +  where None = manhattanDistance(<source.manhattan_distance.Point object at 0x7f525c295be0>)
+E        +    where manhattanDistance = <source.manhattan_distance.Point object at 0x7f525c296e10>.manhattanDistance
+
+tests/test_manhattan_distance.py:7: AssertionError
+=========================================================== short test summary info ===========================================================
+FAILED tests/test_manhattan_distance.py::test_1 - assert None == 1
+============================================================== 1 failed in 0.02s ==============================================================
