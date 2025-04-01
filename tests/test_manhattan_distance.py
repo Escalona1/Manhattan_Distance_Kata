@@ -14,5 +14,8 @@ def test_not_aligned_points():
 
     p1 = Point(1,1)
     p2 = Point(3,3)
+    p3 = Point(5,3)
 
     assert manhattanDistance(p1, p2) == 4
+    assert manhattanDistance(p2, p3) == 2
+    assert manhattanDistance(p2, p1) == 4
